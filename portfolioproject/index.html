@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href = "style.css" rel = "stylesheet" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    
+</head>
+<body>
+ 
+   
+     <div class = "container" >
+    <a class = "a" href = "">Home </a>
+    <a class = "b" href= "">About</a>
+    <a  class = "c" href = "">Contact</a>
+    <a class = "d" href = "">Education</a>
+     </div>
+
+     <div class = "content">
+
+        <div class = "home">
+            <h1>Welcome to My Page</h1>
+            <h3>Learning</h3>
+        </div>
+
+         <div class="aboutus">
+             <p><b>My name is Eric Dearing,</b><br>
+             I studied Informatics at Indiana University and graduated
+             in May 2017.  In my college coursework I used Python as well as Sql.
+             I worked for a company called Infosys where I did front end development 
+             using React Javascript framework as well as AWS.<br>
+            
+            </p>
+            <p>
+             dummy text for extending the page . more dummy tet fro the Page.  heres more dummy words.
+             I am learning and expanding on front end development skills.   I hope to continue 
+             this as a career.  Feel free to explore my page. 
+             
+            </p>
+         </div>
+         <div class = "gallery">
+             <h1>I am a gallery</h1>
+             <div class="image">
+                 <img src="images/beach.jpg">
+             </div>
+         </div>
+    </div>
+
+
+</div>
+</div>
+
+<!-- <script type = "text/javascript" src = "js/jquery-3.4.1.js" ></script> -->
+
+<script type = "text/javascript" src = "/js/jquery-3.2.1.min.js" ></script> 
+<script type = "text/javascript">
+
+$(document).ready(function() {
+    $('a').click(function() {
+       
+        //  alert("i am click")
+        var selected = $(this);
+        $('a').removeClass('.active');
+        $(selected).addClass('.active');
+    });
+
+    var $a = $('.a'),
+    $b = $('.b'),
+    $c = $('.c'),
+    $d = $('.d'),
+    $home = $('.home'),
+    $about = $('.aboutus');
+    $gallery = $('.gallery'),
+    $contactus = $('.contactus');
+
+    $a.click(function() {
+        $home.fadeIn(400);
+        
+        $aboutus.fadeOut();
+        $gallery.fadeOut();
+        $contactus.fadeOut();
+    });
+    $b.click(function() {
+        $aboutus.fadeIn();
+        $home.fadeOut();
+        $gallery.fadeOut();
+        $contactus.fadeOut();
+    });
+
+    // $c.click(function() {
+    //     $gallery.fadeIn();
+    //     $home.fadeOut();
+    //     $aboutus.fadeOut();
+    //     $contactus.fadeOut();
+    // })
+
+    // $d.click(function() {
+    //     $contactus.fadeIn();
+    //     $home.fadeOut();
+    //     $gallery.fadeIn();
+    //     $aboutus.fadeOut()
+        
+    // })
+});
+
+
+</script>
+</body>
+
+</html>
